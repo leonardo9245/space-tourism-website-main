@@ -1,0 +1,55 @@
+:root {
+  --subtitle-color: #fff;
+  --text-color: #d0d6f9;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px;
+}
+#hamburguer-button {
+  cursor: pointer;
+}
+
+.close {
+  position: absolute;
+  top: 32px;
+  right: 24px;
+}
+
+header #menu {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  backdrop-filter: blur(50px);
+  color: #979797;
+  padding: 24px;
+  z-index: 9999;
+  animation: anim 1s;
+  transition: 1s;
+}
+
+#menu ul {
+  margin-top: 90px;
+}
+
+#menu ul li {
+  margin-bottom: 32px;
+  font: 400 1rem 'Barlow Condensed', sans-serif;
+  text-transform: uppercase;
+  display: flex;
+  flex-wrap: nowrap;
+}
+#menu ul li span {
+  font-weight: bold;
+}
+
+#menu ul li a {
+  color: var(--subtitle-color);
+  letter-spacing: 2.7px;
+  padding: 8px;
+}

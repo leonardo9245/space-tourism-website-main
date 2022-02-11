@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&family=Rubik:wght@300;400;500&display=swap');
+
+:root {
+  --subtitle-color: #fff;
+  --text-color: #d0d6f9;
+}
+
+body {
+  max-width: 100%;
+  height: 100vh;
+  background: url('../assets/crew/background-crew-mobile.jpg');
+  background-size: cover;
+}
+
+main {
+  text-align: center;
+  overflow-x: hidden;
+}
+h1 {
+  font-family: 'Barlow condensed', sans-serif;
+  font-size: 19px;
+  color: var(--subtitle-color);
+  letter-spacing: 2.7px;
+  text-transform: uppercase;
+  margin: 24px auto;
+  text-align: center;
+}
+h1 span {
+  color: #d0d6f980;
+  margin: 0 20px;
+}
+
+.crew {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 32px;
+}
+
+.img figure {
+  position: relative;
+  width: 327px;
+  display: inline-block;
+  align-items: center;
+  border-image-slice: fill;
+  align-items: center;
+}
+
+.img figure::before {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 2.5px;
+  width: 100%;
+  height: 1px;
+  background-color: #97979778;
+}
+
+.img img {
+  margin: 0 auto;
+  max-width: 200px;
+  height: 220px;
+}
+
+.swap {
+  margin: 32px auto;
+}
+
+.swap a {
+  margin-left: 16px;
+}
+
+.swap a:hover {
+  cursor: pointer;
+}
+
+p {
+  color: #fff;
+}

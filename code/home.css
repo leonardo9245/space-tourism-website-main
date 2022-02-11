@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&family=Rubik:wght@300;400;500&display=swap');
+
+:root {
+  --subtitle-color: #fff;
+  --text-color: #d0d6f9;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: url('./assets/home/background-home-mobile.jpg');
+  background-size: cover;
+}
+
+h1 {
+  font: 400 1.5rem 'Barlow Condensed', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--text-color);
+  letter-spacing: 2.7px;
+  margin-top: 32px;
+}
+
+h2 {
+  font: 400 5rem 'Bellefair', sans-serif;
+  text-transform: uppercase;
+  color: var(--subtitle-color);
+  text-align: center;
+  margin: 16px;
+}
+
+.text {
+  margin: 0 auto;
+  max-width: 400px;
+  margin-bottom: 60px;
+}
+
+p {
+  font: 400 0.9rem 'Barlow', sans-serif;
+  color: var(--text-color);
+  line-height: 25px;
+  text-align: center;
+  margin: 16px 24px;
+}
+
+.circle {
+  position: relative;
+  background: #fff;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 40px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.circle::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #97979736;
+  border-radius: 50%;
+  z-index: -1;
+  transition: 1s;
+}
+.circle:hover::before {
+  transform: scale(1.7, 1.7);
+}
+
+.circle span {
+  font: 400 1.25rem 'Bellefair', sans-serif;
+  text-transform: uppercase;
+}
