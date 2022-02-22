@@ -11,11 +11,12 @@
       href="../assets/shared/logo.svg"
     />
 
-    <link rel="stylesheet" href="../menu/menu.css" />
-    <link rel="stylesheet" href="../reset/reset.css" />
-    <link rel="stylesheet" href="./crew.css" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/menu.css" />
+    <link rel="stylesheet" href="../css/default.css" />
+    <link rel="stylesheet" href="../css/technology.css" />
 
-    <title>Space tourism | Crew</title>
+    <title>Space tourism | Technology</title>
   </head>
   <body>
     <header>
@@ -24,10 +25,10 @@
           <img src="../assets/shared/logo.svg" alt="#" />
         </a>
       </figure>
-      <figure id="hamburguer-button">
+      <figure class="hamburguer-button">
         <img src="../assets/shared/icon-hamburger.svg" alt="#" />
       </figure>
-      <nav id="menu">
+      <nav id="menu" class="menu-desktop">
         <figure class="close">
           <img src="../assets/shared/icon-close.svg" alt="#" />
         </figure>
@@ -36,30 +37,27 @@
             <a href="../index.html"><span>00</span> Home</a>
           </li>
           <li>
-            <a href="../destination/destination.html"
-              ><span>01</span> Destination</a
-            >
+            <a href="../html/destination.html"><span>01</span> Destination</a>
           </li>
           <li>
-            <a href="#"><span>02</span> Crew</a>
+            <a href="../html/crew.html"><span>02</span> Crew</a>
           </li>
           <li>
-            <a href="../technology/technology.html"
-              ><span>03</span> Technology
-            </a>
+            <a class="active" href="#"><span>03</span> Technology </a>
           </li>
         </ul>
       </nav>
     </header>
     <main>
-      <h1><span>02</span>meet your crew</h1>
-      <div class="crew">
+      <h1><span>03</span>space launch 101</h1>
+      <div class="technology-container">
         <div class="img"></div>
         <div class="swap"></div>
+        <h2>the Tecnology...</h2>
         <div class="description"></div>
       </div>
     </main>
-    <script src="../menu/menu.js"></script>
-    <script src="./crew.js"></script>
+    <script src="../js/menu.js"></script>
+    <script src="../js/technology.js"></script>
   </body>
 </html>

@@ -1,0 +1,136 @@
+:root {
+  --subtitle-color: #fff;
+  --text-color: #d0d6f9;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px;
+}
+.hamburguer-button {
+  cursor: pointer;
+}
+
+.close {
+  position: absolute;
+  top: 32px;
+  right: 24px;
+  cursor: pointer;
+}
+
+nav {
+  display: none;
+}
+.open-menu {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(81.5485px);
+  padding-right: 95px;
+  padding-left: 32px;
+  z-index: 9999;
+  animation: anim 1s;
+  transition: 1s;
+}
+
+#menu ul {
+  margin-top: 118px;
+  width: 100%;
+}
+
+#menu ul li {
+  margin-bottom: 32px;
+  font: 400 1rem 'Barlow Condensed', sans-serif;
+  text-transform: uppercase;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+#menu ul li a {
+  color: var(--subtitle-color);
+  letter-spacing: 2.7px;
+  padding: 8px;
+}
+
+#menu ul li span {
+  font-weight: bold;
+}
+
+@media (min-width: 600px) {
+  header .open-menu {
+    display: none;
+  }
+
+  header .menu-desktop {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    min-width: 450px;
+    height: 96px;
+    padding: 0 48px;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(81.5485px);
+    z-index: 9999;
+  }
+  #menu ul {
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #menu ul li {
+    margin: 0;
+    font-size: 0.875rem;
+  }
+
+  #menu ul li a {
+    position: relative;
+    padding: 40px 10px;
+  }
+
+  #menu ul li a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+  }
+
+  #menu ul li a:hover::before {
+    background-color: #fff;
+    opacity: 0.5;
+  }
+
+  #menu ul .active {
+    position: relative;
+  }
+
+  #menu ul .active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+  }
+
+  #menu ul li a span {
+    display: none;
+  }
+  .close {
+    display: none;
+  }
+
+  .hamburguer-button {
+    display: none;
+  }
+}

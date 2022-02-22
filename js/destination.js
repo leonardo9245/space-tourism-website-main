@@ -13,7 +13,7 @@ async function getDestinations() {
     distance = document.querySelector('.distance')
 
   for (let i in destinations) {
-    destination.innerHTML += `<div id="${destinations[i].name}" class="active" ><a id="${i}">${destinations[i].name}</a></div>`
+    destination.innerHTML += `<div id="${destinations[i].name}" class="dest active-destination" ><a id="${i}">${destinations[i].name}</a></div>`
 
     let dest = document.querySelectorAll('.destinations a')
 
@@ -31,11 +31,15 @@ async function getDestinations() {
 
     description.innerHTML = `<p>${destinations[index].description}</p>`
 
-    distance.innerHTML = `
+    distance.innerHTML = `<div>
     <span>avg. distance</span>
     <p>${destinations[index].distance}</p>
+    </div>
+    <div>
     <span>est. travel time</span>
     <p>${destinations[index].travel}</p>
+    </div>
+    
     `
 
     let moon = document.getElementById('Moon'),
@@ -44,25 +48,25 @@ async function getDestinations() {
       titan = document.getElementById('Titan')
 
     if (index == 0) {
-      moon.classList.add('active')
-      mars.classList.remove('active')
-      europa.classList.remove('active')
-      titan.classList.remove('active')
+      moon.classList.add('active-destination')
+      mars.classList.remove('active-destination')
+      europa.classList.remove('active-destination')
+      titan.classList.remove('active-destination')
     } else if (index == 1) {
-      moon.classList.remove('active')
-      mars.classList.add('active')
-      europa.classList.remove('active')
-      titan.classList.remove('active')
+      moon.classList.remove('active-destination')
+      mars.classList.add('active-destination')
+      europa.classList.remove('active-destination')
+      titan.classList.remove('active-destination')
     } else if (index == 2) {
-      moon.classList.remove('active')
-      mars.classList.remove('active')
-      europa.classList.add('active')
-      titan.classList.remove('active')
+      moon.classList.remove('active-destination')
+      mars.classList.remove('active-destination')
+      europa.classList.add('active-destination')
+      titan.classList.remove('active-destination')
     } else if (index == 3) {
-      moon.classList.remove('active')
-      mars.classList.remove('active')
-      europa.classList.remove('active')
-      titan.classList.add('active')
+      moon.classList.remove('active-destination')
+      mars.classList.remove('active-destination')
+      europa.classList.remove('active-destination')
+      titan.classList.add('active-destination')
     }
   }
   showDestination(0)

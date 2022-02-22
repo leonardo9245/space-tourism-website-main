@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&family=Rubik:wght@300;400;500&display=swap');
+
+:root {
+  --subtitle-color: #fff;
+  --text-color: #d0d6f9;
+}
+
+body {
+  background: url('../assets/technology/background-technology-mobile.jpg');
+  background-size: cover;
+  color: #fff;
+}
+
+.technology-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img .mobile {
+  display: block;
+  margin: 34px auto;
+}
+
+.img .desktop {
+  display: none;
+}
+
+.img img {
+  max-width: 500px;
+  min-height: 170px;
+}
+
+.swap {
+  margin-bottom: 26px;
+  display: flex;
+}
+
+.swap-style {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-left: 20px;
+  border: 1px solid;
+  color: #fff;
+  opacity: 0.5;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.swap-style:hover {
+  opacity: 1;
+}
+
+.active-swap {
+  background: #fff;
+  opacity: 1;
+}
+
+.swap-style a {
+  font: 500 1rem 'Bellefair', sans-serif;
+  color: var(--subtitle-color);
+}
+
+.active-swap a {
+  color: #0b0d17;
+}
+
+h2 {
+  font: 400 0.875rem 'Barlow Condensed', sans-serif;
+  color: var(--text-color);
+  text-transform: uppercase;
+  letter-spacing: 2.36px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.description {
+  width: 327px;
+  margin-bottom: 32px;
+}
+
+.name {
+  font: 400 1.5rem 'Bellefair', sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  color: var(--subtitle-color);
+}
+
+.desc {
+  font: 400 0.9375 'Barlow', sans-serif;
+  color: var(--text-color);
+  line-height: 25px;
+  font-style: normal;
+}
+
+@media (min-width: 500px) {
+  body {
+    max-width: 100%;
+    min-height: 100vh;
+    background: url('../assets/technology/background-technology-tablet.jpg');
+    background-size: cover;
+  }
+  .img img {
+    min-width: 100vw;
+    height: 100%;
+  }
+
+  .swap-style {
+    width: 60px;
+    height: 60px;
+  }
+
+  .swap-style a {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+    letter-spacing: 2.7px;
+    line-height: 19px;
+  }
+
+  .description {
+    width: 458px;
+  }
+
+  .name {
+    font-size: 2.5rem;
+    line-height: 46px;
+  }
+
+  .desc {
+    font-size: 1rem;
+    line-height: 28px;
+  }
+}

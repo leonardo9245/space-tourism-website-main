@@ -6,14 +6,14 @@
 }
 
 body {
-  width: 100%;
+  max-width: 100%;
   min-height: 100vh;
-  background: url('./assets/home/background-home-mobile.jpg');
+  background: url('../assets/home/background-home-mobile.jpg');
   background-size: cover;
 }
 
 h1 {
-  font: 400 1.5rem 'Barlow Condensed', sans-serif;
+  font: 400 1rem 'Barlow Condensed', sans-serif;
   text-transform: uppercase;
   text-align: center;
   color: var(--text-color);
@@ -31,7 +31,7 @@ h2 {
 
 .text {
   margin: 0 auto;
-  max-width: 400px;
+  max-width: 444px;
   margin-bottom: 60px;
 }
 
@@ -73,4 +73,35 @@ p {
 .circle span {
   font: 400 1.25rem 'Bellefair', sans-serif;
   text-transform: uppercase;
+}
+
+@media (min-width: 500px) {
+  body {
+    max-width: 100%;
+    min-height: 100vh;
+    background: url('../assets/home/background-home-tablet.jpg') no-repeat;
+    background-size: cover;
+  }
+
+  main {
+    margin-top: 106px;
+  }
+
+  h1 {
+    font-size: 1.25rem;
+  }
+
+  h2 {
+    font-size: 9.375rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .circle {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 24px;
+  }
 }

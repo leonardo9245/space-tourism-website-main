@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&family=Rubik:wght@300;400;500&display=swap');
+
+:root {
+  --subtitle-color: #fff;
+  --text-color: #d0d6f9;
+}
+
+body {
+  min-width: 100%;
+  min-height: 100vh;
+  background: url(../assets/destination/background-destination-mobile.jpg);
+  background-size: cover;
+  color: #fff;
+}
+
+.destination-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 2rem;
+  max-width: 100%;
+}
+
+.img figure {
+  width: 200px;
+  height: 200px;
+  margin: 32px auto;
+}
+
+.img img {
+  width: 100%;
+}
+
+.destinations {
+  display: flex;
+  justify-content: space-between;
+  margin: 32px 16px;
+  width: 270px;
+}
+
+.dest {
+  position: relative;
+}
+
+.destinations .dest::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -12px;
+  width: 100%;
+  height: 3px;
+}
+
+.destinations .dest:hover::after {
+  background-color: #fff;
+  opacity: 0.5;
+}
+
+.active-destination {
+  position: relative;
+}
+
+.destinations .active a {
+  color: var(--subtitle-color);
+}
+
+.active-destination::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -12px;
+  width: 100%;
+  height: 3px;
+  background: var(--subtitle-color);
+}
+
+.destinations a {
+  position: relative;
+  color: var(--text-color);
+  text-transform: uppercase;
+  font: 400 0.875rem 'Barlow Condensed', sans-serif;
+  letter-spacing: 2.3625px;
+  cursor: pointer;
+  padding-bottom: 5px;
+}
+
+.name h2 {
+  font: 500 3.5rem 'Bellefair', sans-serif;
+  text-transform: uppercase;
+}
+
+.description {
+  padding-bottom: 32px;
+  border-bottom: 1px solid #97979778;
+  max-width: 573px;
+}
+
+.description p {
+  font: 500 0.9375rem 'Barlow', sans-serif;
+  line-height: 25px;
+  color: var(--text-color);
+}
+
+.distance {
+  margin: 32px 0;
+}
+
+.distance span {
+  font: 400 0.875rem 'Barlow Condensed', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2.3625px;
+  color: var(--text-color);
+}
+
+.distance p {
+  margin-top: 12px;
+  margin-bottom: 32px;
+  font: 400 1.75rem 'Bellefair', sans-serif;
+  text-transform: uppercase;
+}
+
+@media (min-width: 500px) {
+  body {
+    min-width: 100%;
+    min-height: 100vh;
+    background: url('../assets/destination/background-destination-tablet.jpg');
+    background-size: cover;
+  }
+
+  .img figure {
+    width: 300px;
+    height: 300px;
+  }
+
+  .destinations a {
+    font-size: 1rem;
+    letter-spacing: 2.7px;
+  }
+
+  .name h2 {
+    font-size: 5rem;
+  }
+
+  .description p {
+    font-size: 1rem;
+    line-height: 28px;
+  }
+
+  .distance {
+    display: flex;
+    justify-content: space-around;
+    width: 500px;
+  }
+}
