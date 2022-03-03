@@ -8,6 +8,7 @@
 body {
   background: url('../assets/crew/background-crew-mobile.jpg');
   background-size: cover;
+  background-position: center;
 }
 
 .crew {
@@ -96,12 +97,18 @@ body {
     min-height: 100vh;
     background: url('../assets/crew/background-crew-tablet.jpg');
     background-size: cover;
+    background-position: center;
   }
 
   .crew {
     flex-direction: column-reverse;
     width: 460px;
     margin: 60px auto;
+  }
+
+  .desc-container {
+    display: flex;
+    flex-direction: column-reverse;
   }
 
   .description .role {
@@ -120,10 +127,6 @@ body {
     width: 458px;
     height: 84px;
   }
-  .img-container {
-    display: flex;
-    flex-direction: column-reverse;
-  }
 
   .img figure {
     width: 456px;
@@ -136,5 +139,76 @@ body {
   }
   .img figure::before {
     display: none;
+  }
+}
+
+@media (min-width: 1000px) {
+  body {
+    min-height: 100vh;
+    background: url('../assets/crew/background-crew-desktop.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  main {
+    position: relative;
+  }
+
+  .crew {
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 100%;
+    margin-left: 60px;
+  }
+
+  .description .role {
+    text-align: left;
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  .description .name {
+    text-align: left;
+    font-size: 3.5rem;
+    line-height: 64px;
+  }
+
+  .description .bio {
+    width: 440px;
+    text-align: left;
+    font-size: 1.125rem;
+    line-height: 32px;
+  }
+
+  .swap {
+    margin-top: 160px;
+    margin-left: 10px;
+  }
+
+  .desc-container {
+    margin-top: 154px;
+  }
+
+  .img figure {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    width: 500px;
+    height: 600px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .crew {
+    margin-left: 120px;
+  }
+  .swap a {
+    width: 18px;
+    height: 18px;
+  }
+  .img figure {
+    right: 80px;
+    width: 568px;
+    height: 700px;
   }
 }

@@ -35,7 +35,7 @@ async function getDestinations() {
     <span>avg. distance</span>
     <p>${destinations[index].distance}</p>
     </div>
-    <div>
+    <div class="dist">
     <span>est. travel time</span>
     <p>${destinations[index].travel}</p>
     </div>

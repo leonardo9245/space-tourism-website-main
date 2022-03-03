@@ -8,10 +8,11 @@
 body {
   background: url('../assets/technology/background-technology-mobile.jpg');
   background-size: cover;
+  background-position: center;
   color: #fff;
 }
 
-.technology-container {
+.desc-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -68,18 +69,18 @@ body {
   color: #0b0d17;
 }
 
-h2 {
+.description {
+  width: 327px;
+  margin-bottom: 32px;
+}
+
+.description h2 {
   font: 400 0.875rem 'Barlow Condensed', sans-serif;
   color: var(--text-color);
   text-transform: uppercase;
   letter-spacing: 2.36px;
   margin-top: 20px;
   margin-bottom: 10px;
-}
-
-.description {
-  width: 327px;
-  margin-bottom: 32px;
 }
 
 .name {
@@ -102,6 +103,7 @@ h2 {
     min-height: 100vh;
     background: url('../assets/technology/background-technology-tablet.jpg');
     background-size: cover;
+    background-position: center;
   }
   .img img {
     min-width: 100vw;
@@ -135,5 +137,84 @@ h2 {
   .desc {
     font-size: 1rem;
     line-height: 28px;
+  }
+}
+
+@media (min-width: 1000px) {
+  body {
+    background: url('../assets//technology/background-technology-desktop.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+
+  main {
+    max-width: 100vw;
+  }
+
+  .technology-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .img .mobile {
+    display: none;
+  }
+
+  .img .desktop {
+    display: block;
+    margin-right: 0;
+    max-width: 400px;
+    height: 400px;
+  }
+
+  .img img {
+    min-width: 100%;
+  }
+
+  .desc-container {
+    flex-direction: row;
+    margin-left: 60px;
+  }
+
+  .swap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 250px;
+    margin-right: 40px;
+  }
+
+  .description {
+    width: 470px;
+    text-align: left;
+  }
+
+  .name {
+    font-size: 3.5rem;
+    line-height: 64px;
+  }
+
+  .desc {
+    font-size: 1.125rem;
+    line-height: 32px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .img .desktop {
+    margin-right: 90px;
+    width: 600px;
+    height: 500px;
+  }
+  .desc-container {
+    margin-left: 120px;
+  }
+  .swap {
+    margin-right: 60px;
+  }
+  .swap-style {
+    width: 70px;
+    height: 70px;
   }
 }

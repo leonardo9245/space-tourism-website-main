@@ -27,7 +27,9 @@ async function getTec() {
     <figure class="desktop"><img src="${technology[index].images.portrait}"/></figure>
     `
 
-    description.innerHTML = `<p class="name">${technology[index].name}</p>
+    description.innerHTML = `
+    <h2>the Tecnology...</h2>
+    <p class="name">${technology[index].name}</p>
     <p class="desc">${technology[index].description}</p>
     `
 
