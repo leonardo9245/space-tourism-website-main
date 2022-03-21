@@ -1,14 +1,15 @@
-var button = document.querySelectorAll('.hamburguer-button, .close')
-var menu = document.getElementById('menu')
-var links = document.querySelectorAll('header nav .close, main, #menu')
+var button = document.querySelector('.hamburguer-button');
+var menu = document.getElementById('menu');
+var links = document.querySelectorAll(' main, #menu');
 
-for (let buttons of button) {
-  buttons.addEventListener('click', () => {
-    menu.classList.toggle('open-menu')
-  })
-}
+button.addEventListener('click', () => {
+  menu.classList.toggle('open-menu');
+  button.classList.toggle('on');
+});
+
 for (let link of links) {
   link.addEventListener('click', () => {
-    menu.classList.remove('open-menu')
-  })
+    menu.classList.remove('open-menu');
+    button.classList.remove('on');
+  });
 }
