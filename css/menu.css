@@ -41,6 +41,7 @@ header {
 .on .one {
   position: absolute;
   transform: rotate(45deg);
+  top: 10px;
 }
 
 .on .two {
@@ -50,6 +51,7 @@ header {
 .on .three {
   position: absolute;
   transform: rotate(-45deg);
+  top: 10px;
 }
 
 nav {
